@@ -1,0 +1,190 @@
+compose.config.config.find: Using configuration files: ./docker-compose-notty.yaml
+docker.auth.auth.find_config_file: Trying paths: <filter object at 0x2b81ad60ad68>
+docker.auth.auth.find_config_file: Found file at path: /home/ahmed/.docker/config.json
+docker.auth.auth.load_config: Found 'auths' section
+docker.auth.auth.parse_auth: Found entry (registry='https://index.docker.io/v1/', username='guneysu')
+compose.cli.command.get_client: docker-compose version 1.8.1, build 878cff1
+docker-py version: 1.10.3
+CPython version: 3.4.3
+OpenSSL version: OpenSSL 1.0.1f 6 Jan 2014
+compose.cli.command.get_client: Docker base_url: http+docker://localunixsocket
+compose.cli.command.get_client: Docker version: ApiVersion=1.24, Os=linux, GoVersion=go1.6.3, Version=1.12.1, GitCommit=23cf638, BuildTime=2016-08-18T05:22:43.932726241+00:00, Arch=amd64, KernelVersion=3.19.0-32-generic
+compose.cli.verbose_proxy.proxy_callable: docker info <- ()
+compose.cli.verbose_proxy.proxy_callable: docker info -> {'Architecture': 'x86_64',
+ 'BridgeNfIp6tables': True,
+ 'BridgeNfIptables': True,
+ 'CPUSet': True,
+ 'CPUShares': True,
+ 'CgroupDriver': 'cgroupfs',
+ 'ClusterAdvertise': '',
+ 'ClusterStore': '',
+ 'Containers': 23,
+ 'ContainersPaused': 0,
+...
+compose.cli.verbose_proxy.proxy_callable: docker inspect_network <- ('dockercomposestderrstdouttest_default')
+compose.cli.verbose_proxy.proxy_callable: docker inspect_network -> {'Containers': {},
+ 'Driver': 'bridge',
+ 'EnableIPv6': False,
+ 'IPAM': {'Config': [{'Gateway': '172.20.0.1/16', 'Subnet': '172.20.0.0/16'}],
+          'Driver': 'default',
+          'Options': None},
+ 'Id': 'a89993813e5316a07b0c60e74bc3ce873d40efd25926716ee84dfb9d853f02f8',
+ 'Internal': False,
+ 'Labels': {},
+ 'Name': 'dockercomposestderrstdouttest_default',
+...
+compose.cli.verbose_proxy.proxy_callable: docker containers <- (all=False, filters={'label': ['com.docker.compose.project=dockercomposestderrstdouttest', 'com.docker.compose.oneoff=False']})
+compose.cli.verbose_proxy.proxy_callable: docker containers -> (list with 0 items)
+compose.cli.verbose_proxy.proxy_callable: docker containers <- (all=True, filters={'label': ['com.docker.compose.project=dockercomposestderrstdouttest', 'com.docker.compose.service=test', 'com.docker.compose.oneoff=False']})
+compose.cli.verbose_proxy.proxy_callable: docker containers -> (list with 1 items)
+compose.cli.verbose_proxy.proxy_callable: docker inspect_container <- ('69836bc7291e9619ea6a3416f7863876cf64ba62f76cf624e8b72c3cd4596214')
+compose.cli.verbose_proxy.proxy_callable: docker inspect_container -> {'AppArmorProfile': '',
+ 'Args': ['-c', 'python2 /app.py'],
+ 'Config': {'AttachStderr': False,
+            'AttachStdin': False,
+            'AttachStdout': False,
+            'Cmd': ['/bin/sh', '-c', 'python2 /app.py'],
+            'Domainname': '',
+            'Entrypoint': None,
+            'Env': ['PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'],
+            'Hostname': 'test',
+...
+compose.cli.verbose_proxy.proxy_callable: docker inspect_image <- ('sandbox/compose-stderr-test')
+compose.cli.verbose_proxy.proxy_callable: docker inspect_image -> {'Architecture': 'amd64',
+ 'Author': '',
+ 'Comment': '',
+ 'Config': {'ArgsEscaped': True,
+            'AttachStderr': False,
+            'AttachStdin': False,
+            'AttachStdout': False,
+            'Cmd': ['/bin/sh', '-c', 'python2 /app.py'],
+            'Domainname': '',
+            'Entrypoint': None,
+...
+compose.cli.verbose_proxy.proxy_callable: docker containers <- (all=True, filters={'label': ['com.docker.compose.project=dockercomposestderrstdouttest', 'com.docker.compose.service=test', 'com.docker.compose.oneoff=False']})
+compose.cli.verbose_proxy.proxy_callable: docker containers -> (list with 1 items)
+compose.cli.verbose_proxy.proxy_callable: docker inspect_image <- ('sandbox/compose-stderr-test')
+compose.cli.verbose_proxy.proxy_callable: docker inspect_image -> {'Architecture': 'amd64',
+ 'Author': '',
+ 'Comment': '',
+ 'Config': {'ArgsEscaped': True,
+            'AttachStderr': False,
+            'AttachStdin': False,
+            'AttachStdout': False,
+            'Cmd': ['/bin/sh', '-c', 'python2 /app.py'],
+            'Domainname': '',
+            'Entrypoint': None,
+...
+compose.cli.verbose_proxy.proxy_callable: docker inspect_container <- ('69836bc7291e9619ea6a3416f7863876cf64ba62f76cf624e8b72c3cd4596214')
+compose.cli.verbose_proxy.proxy_callable: docker inspect_container -> {'AppArmorProfile': '',
+ 'Args': ['-c', 'python2 /app.py'],
+ 'Config': {'AttachStderr': False,
+            'AttachStdin': False,
+            'AttachStdout': False,
+            'Cmd': ['/bin/sh', '-c', 'python2 /app.py'],
+            'Domainname': '',
+            'Entrypoint': None,
+            'Env': ['PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'],
+            'Hostname': 'test',
+...
+compose.service._containers_have_diverged: dockercomposestderrstdouttest_test_1 has diverged: ebc283e3c0557d8a02c708ded60ee09d5ddbbe0e5778621e5e053b968748075e != 3cc41c191d04c6ac2086ddeacab2051e4ff1a7371f3c8fca1d1993f79386a395
+compose.parallel.feed_queue: Pending: {<Service: test>}
+compose.parallel.feed_queue: Starting producer thread for <Service: test>
+compose.service.recreate_container: Recreating dockercomposestderrstdouttest_test_1
+compose.cli.verbose_proxy.proxy_callable: docker stop <- ('69836bc7291e9619ea6a3416f7863876cf64ba62f76cf624e8b72c3cd4596214', timeout=10)
+compose.cli.verbose_proxy.proxy_callable: docker stop -> None
+compose.cli.verbose_proxy.proxy_callable: docker rename <- ('69836bc7291e9619ea6a3416f7863876cf64ba62f76cf624e8b72c3cd4596214', '69836bc7291e_dockercomposestderrstdouttest_test_1')
+compose.cli.verbose_proxy.proxy_callable: docker rename -> None
+compose.cli.verbose_proxy.proxy_callable: docker inspect_image <- ('sandbox/compose-stderr-test')
+compose.cli.verbose_proxy.proxy_callable: docker inspect_image -> {'Architecture': 'amd64',
+ 'Author': '',
+ 'Comment': '',
+ 'Config': {'ArgsEscaped': True,
+            'AttachStderr': False,
+            'AttachStdin': False,
+            'AttachStdout': False,
+            'Cmd': ['/bin/sh', '-c', 'python2 /app.py'],
+            'Domainname': '',
+            'Entrypoint': None,
+...
+compose.cli.verbose_proxy.proxy_callable: docker inspect_image <- ('sha256:0d14b7fe35563b775eb40f5c1e5a21729be00116091527c3aa5e8dcae2ec2f7c')
+compose.cli.verbose_proxy.proxy_callable: docker inspect_image -> {'Architecture': 'amd64',
+ 'Author': '',
+ 'Comment': '',
+ 'Config': {'ArgsEscaped': True,
+            'AttachStderr': False,
+            'AttachStdin': False,
+            'AttachStdout': False,
+            'Cmd': ['/bin/sh', '-c', 'python2 /app.py'],
+            'Domainname': '',
+            'Entrypoint': None,
+...
+compose.cli.verbose_proxy.proxy_callable: docker inspect_image <- ('sandbox/compose-stderr-test')
+compose.cli.verbose_proxy.proxy_callable: docker inspect_image -> {'Architecture': 'amd64',
+ 'Author': '',
+ 'Comment': '',
+ 'Config': {'ArgsEscaped': True,
+            'AttachStderr': False,
+            'AttachStdin': False,
+            'AttachStdout': False,
+            'Cmd': ['/bin/sh', '-c', 'python2 /app.py'],
+            'Domainname': '',
+            'Entrypoint': None,
+...
+compose.service.build_container_labels: Added config hash: 3cc41c191d04c6ac2086ddeacab2051e4ff1a7371f3c8fca1d1993f79386a395
+compose.cli.verbose_proxy.proxy_callable: docker create_host_config <- (tmpfs=None, extra_hosts=None, cpu_quota=None, shm_size=None, log_config={'Config': {}, 'Type': ''}, links=[], memswap_limit=None, mem_limit=None, dns_search=None, port_bindings={}, cap_add=None, ipc_mode=None, devices=None, restart_policy=None, volumes_from=[], binds=[], ulimits=None, cgroup_parent=None, network_mode='dockercomposestderrstdouttest_default', pid_mode=None, dns=None, read_only=None, security_opt=None, privileged=False, cap_drop=None)
+compose.cli.verbose_proxy.proxy_callable: docker create_host_config -> {'Binds': [],
+ 'Links': [],
+ 'LogConfig': {'Config': {}, 'Type': ''},
+ 'NetworkMode': 'dockercomposestderrstdouttest_default',
+ 'PortBindings': {},
+ 'VolumesFrom': []}
+compose.cli.verbose_proxy.proxy_callable: docker create_container <- (hostname='test', detach=True, name='dockercomposestderrstdouttest_test_1', volumes={}, image='sandbox/compose-stderr-test', environment=[], networking_config={'EndpointsConfig': {'dockercomposestderrstdouttest_default': {'Aliases': ['test'], 'IPAMConfig': {}}}}, labels={'com.docker.compose.service': 'test', 'com.docker.compose.container-number': '1', 'com.docker.compose.project': 'dockercomposestderrstdouttest', 'com.docker.compose.oneoff': 'False', 'com.docker.compose.config-hash': '3cc41c191d04c6ac2086ddeacab2051e4ff1a7371f3c8fca1d1993f79386a395', 'com.docker.compose.version': '1.8.1'}, host_config={'VolumesFrom': [], 'NetworkMode': 'dockercomposestderrstdouttest_default', 'Links': [], 'PortBindings': {}, 'LogConfig': {'Config': {}, 'Type': ''}, 'Binds': []})
+compose.parallel.feed_queue: Pending: set()
+compose.cli.verbose_proxy.proxy_callable: docker create_container -> {'Id': '710bed95e7ab4f45bbb68748a44da745ebd71e9ed9c149042b613d1c67f20238',
+ 'Warnings': None}
+compose.cli.verbose_proxy.proxy_callable: docker inspect_container <- ('710bed95e7ab4f45bbb68748a44da745ebd71e9ed9c149042b613d1c67f20238')
+compose.cli.verbose_proxy.proxy_callable: docker inspect_container -> {'AppArmorProfile': '',
+ 'Args': ['-c', 'python2 /app.py'],
+ 'Config': {'AttachStderr': False,
+            'AttachStdin': False,
+            'AttachStdout': False,
+            'Cmd': ['/bin/sh', '-c', 'python2 /app.py'],
+            'Domainname': '',
+            'Entrypoint': None,
+            'Env': ['PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'],
+            'Hostname': 'test',
+...
+compose.cli.verbose_proxy.proxy_callable: docker attach <- ('710bed95e7ab4f45bbb68748a44da745ebd71e9ed9c149042b613d1c67f20238', stream=True, stderr=True, stdout=True)
+compose.cli.verbose_proxy.proxy_callable: docker attach -> <generator object frames_iter at 0x2b81ad7d33a8>
+compose.cli.verbose_proxy.proxy_callable: docker disconnect_container_from_network <- ('710bed95e7ab4f45bbb68748a44da745ebd71e9ed9c149042b613d1c67f20238', 'dockercomposestderrstdouttest_default')
+compose.cli.verbose_proxy.proxy_callable: docker disconnect_container_from_network -> None
+compose.cli.verbose_proxy.proxy_callable: docker connect_container_to_network <- ('710bed95e7ab4f45bbb68748a44da745ebd71e9ed9c149042b613d1c67f20238', 'dockercomposestderrstdouttest_default', links=[], ipv6_address=None, aliases=['test', '710bed95e7ab'], ipv4_address=None)
+compose.cli.verbose_proxy.proxy_callable: docker connect_container_to_network -> None
+compose.cli.verbose_proxy.proxy_callable: docker start <- ('710bed95e7ab4f45bbb68748a44da745ebd71e9ed9c149042b613d1c67f20238')
+compose.parallel.feed_queue: Pending: set()
+compose.parallel.feed_queue: Pending: set()
+compose.parallel.feed_queue: Pending: set()
+compose.parallel.feed_queue: Pending: set()
+compose.cli.verbose_proxy.proxy_callable: docker start -> None
+compose.cli.verbose_proxy.proxy_callable: docker remove_container <- ('69836bc7291e9619ea6a3416f7863876cf64ba62f76cf624e8b72c3cd4596214')
+compose.parallel.feed_queue: Pending: set()
+compose.cli.verbose_proxy.proxy_callable: docker remove_container -> None
+compose.parallel.parallel_execute_iter: Finished processing: <Service: test>
+compose.parallel.feed_queue: Pending: set()
+compose.cli.verbose_proxy.proxy_callable: docker events <- (decode=True, filters={'label': ['com.docker.compose.project=dockercomposestderrstdouttest', 'com.docker.compose.oneoff=False']})
+compose.cli.verbose_proxy.proxy_callable: docker events -> <generator object _stream_helper at 0x2b81ad7c0828>
+compose.cli.verbose_proxy.proxy_callable: docker wait <- ('710bed95e7ab4f45bbb68748a44da745ebd71e9ed9c149042b613d1c67f20238')
+compose.cli.verbose_proxy.proxy_callable: docker inspect_container <- ('710bed95e7ab4f45bbb68748a44da745ebd71e9ed9c149042b613d1c67f20238')
+compose.cli.verbose_proxy.proxy_callable: docker wait -> 0
+compose.cli.verbose_proxy.proxy_callable: docker inspect_container -> {'AppArmorProfile': '',
+ 'Args': ['-c', 'python2 /app.py'],
+ 'Config': {'AttachStderr': False,
+            'AttachStdin': False,
+            'AttachStdout': False,
+            'Cmd': ['/bin/sh', '-c', 'python2 /app.py'],
+            'Domainname': '',
+            'Entrypoint': None,
+            'Env': ['PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'],
+            'Hostname': 'test',
+...

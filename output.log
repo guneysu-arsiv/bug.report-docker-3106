@@ -1,0 +1,6 @@
+Attaching to dockercomposestderrstdouttest_test_1
+test_1  | t be go to stdout
+test_1  | this must be go to stderr
+test_1  | ERROR:root:error
+test_1  | WARNING:root:warning
+dockercomposestderrstdouttest_test_1 exited with code 0
